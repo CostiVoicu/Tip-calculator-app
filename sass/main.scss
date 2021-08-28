@@ -1,0 +1,338 @@
+@import './variables';
+
+html, body{
+    margin: 0;
+    height: 100%;
+    height: 100vh;
+}
+
+body{
+    font-size: $font-size;
+    font-family: $font-family;
+    font-weight: $regular-weight;
+    background-color: $neutral-color-light-grayish-cyan;
+}
+.main{
+    padding-top: 3rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    @media (min-width: $desktop-size){
+        height: 100vh;
+        justify-content: center;
+        padding-top: 0rem;
+    }
+    .header{
+        text-align: center;
+        padding-bottom: 1.875rem;
+        @media (min-width: $desktop-size){
+            padding-bottom: 4.375rem;
+        }
+    }
+    .calculator_background{
+        background-color: $neutral-color-white;
+        border-radius: 1.375rem 1.375rem 0rem 0rem;
+        width: 100%;
+        height: auto;
+        padding: 1.375rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        @media (min-width: $desktop-size){
+            width: 57.5rem;
+            height: 30.0625rem;
+            border-radius: 1.375rem;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 2.5rem;
+        }
+        .input{
+            @media (min-width: $desktop-size){
+                width: 25.8125rem;
+                height: 26.0625rem;
+            }
+            .money{
+                position: relative;
+                padding-bottom: 2rem;
+                @media (min-width: $desktop-size){
+                    padding-bottom: 1rem;
+                }
+                .dollar{
+                    position: absolute;
+                    z-index: 9;
+                    top: 3.4rem;
+                    left: 1rem;
+                }
+            }
+        }
+        .tip{
+            display: grid;
+            grid-template-columns: repeat(2, 9.6875rem);
+            grid-template-rows: repeat(4, 3rem);
+            column-gap: 1rem;
+            row-gap: 1rem;
+            padding-bottom: 1.5rem;
+            @media (min-width: $desktop-size){
+                grid-template-columns: repeat(3, 7.3125rem);
+                grid-template-rows: repeat(3, 3rem);
+                padding-bottom: 1rem;
+            }
+            .percent{
+                width: 100%;
+                height: 100%;
+                background-color: $neutral-color-very-dark-cyan;
+                border: 0rem;
+                color: $neutral-color-white;
+                font-size: $font-size;
+                font-family: $font-family;
+                font-weight: $big-weight;
+                border-radius: 0.3125rem;
+                outline: none;
+            }
+            .percent:hover{
+                color: $neutral-color-very-dark-cyan;
+                background-color: hsla(172, 67%, 45%, 0.507);
+            }
+            #tip_title{
+                grid-column: 1/3;
+                grid-row: 1/2;
+                @media (min-width: $desktop-size){
+                    grid-column: 1/4;
+                    grid-row: 1/2;
+                }
+            }
+            #5_percent{
+                grid-column: 1/2;
+                grid-row: 2/3;
+                @media (min-width: $desktop-size){
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                }
+            }
+            #10_percent{
+                grid-column: 2/3;
+                grid-row: 2/3;
+                @media (min-width: $desktop-size){
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                }
+            }
+            #15_percent{
+                grid-column: 1/2;
+                grid-row: 3/4;
+                @media (min-width: $desktop-size){
+                    grid-column: 3/4;
+                    grid-row: 2/3;
+                }
+            }
+            #25_percent{
+                grid-column: 2/3;
+                grid-row: 3/4;
+                @media (min-width: $desktop-size){
+                    grid-column: 1/2;
+                    grid-row: 3/4;
+                }
+            }
+            #50_percent{
+                grid-column: 1/2;
+                grid-row: 4/5;
+                @media (min-width: $desktop-size){
+                    grid-column: 2/3;
+                    grid-row: 3/4;
+                }
+            }
+            #custom_percent{
+                grid-column: 2/3;
+                grid-row: 4/5;
+                width: 78%;
+                background-color: $neutral-color-very-light-grayish-cyan;
+                text-align: right;
+                padding: 0rem 1rem 0rem 1rem;
+                font-size: $font-size;
+                font-family: $font-family;
+                font-weight: $big-weight;
+                color: $neutral-color-very-dark-cyan;
+                border: 0rem;
+                outline: none;
+                @media (min-width: $desktop-size){
+                    grid-column: 3/4;
+                    grid-row: 3/4;
+                    padding: 0rem;
+                    width: 100%;
+                }
+            }
+            #custom_percent::placeholder{
+                color: $neutral-color-very-dark-cyan;
+                opacity: 70%;
+            }
+            #custom_percent:hover{
+                border: .2rem $primary-color-strong-cyan solid;
+                box-sizing: border-box;
+                width: 100%;
+                @media (min-width: $desktop-size){
+                    padding: 0rem;
+                }
+            }
+        }
+        .people{
+            position: relative;
+            padding-bottom: 0.5rem;
+            .person{
+                position: absolute;
+                z-index: 9;
+                top: 3.4rem;
+                left: 1rem;
+            }
+            .error{
+                position: absolute;
+                top: 0rem;
+                right: 0rem;
+                display: none;
+                font-size: $font-size - .4rem;
+                color: hsl(13, 59%, 60%);
+                font-weight: $big-weight;
+                @media (min-width: $desktop-size){
+                    right: 2rem;
+                }
+            }
+        }
+        .title{
+            font-size: $font-size - .4rem;
+            color: $neutral-color-dark-grayish-cyan;
+        }
+        .input_form{
+            z-index: 4;
+            width: 18.4375rem;
+            text-align: center;
+            height: 3rem;
+            background-color: $neutral-color-very-light-grayish-cyan;
+            text-align: right;
+            padding: 0rem 1rem 0rem 2rem;
+            font-size: $font-size;
+            font-family: $font-family;
+            font-weight: $big-weight;
+            color: $neutral-color-very-dark-cyan;
+            border: 0rem;
+            border-radius: 0.3125rem;
+            outline: none;
+            @media (min-width: $desktop-size){
+                width: 21.0875rem;
+            }
+        }
+        .input_form::placeholder{
+            color: $neutral-color-very-dark-grayish-cyan;
+            opacity: 60%;
+        }
+        .input_form:hover{
+            border: .2rem $primary-color-strong-cyan solid;
+            box-sizing: border-box;
+            width: 17.4375rem + 4rem;
+            @media (min-width: $desktop-size){
+                width: 20.0875rem + 4rem;
+                padding-right: 0.8rem;
+            }
+        }
+
+        .output{
+            width: 100%;
+            height: 16.0625rem;
+            margin-top: 2rem;
+            border-radius: 0.9375rem;
+            background-color: $neutral-color-very-dark-cyan;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @media (min-width: $desktop-size){
+                width: 25.8125rem;
+                height: 26.0625rem;
+                margin: 0;
+            }
+            .amount{
+                display: grid;
+                grid-template-columns: repeat(2, 6.25rem);
+                grid-template-rows: repeat(2, 1.4375rem);
+                align-items: center;
+                column-gap: 4rem;
+                padding-bottom: 2rem;
+                @media (min-width: $desktop-size){
+                    column-gap: 9rem;
+                }
+            } 
+            #info_amount{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            #person_amount{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            #tip_amount{
+                grid-column: 2/3;
+                grid-row: 1/3;
+                justify-self: end;
+            }
+            .total{
+                display: grid;
+                grid-template-columns: repeat(2, 6.25rem);
+                grid-template-rows: repeat(2, 1.4375rem);
+                align-items: center;
+                column-gap: 4rem;
+                padding-bottom: 2.1875rem;
+                @media (min-width: $desktop-size){
+                    column-gap: 9rem;
+                    padding-bottom: 9.5rem;
+                }
+            }
+            #info_total{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            #person_total{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            #total_total{
+                grid-column: 2/3;
+                grid-row: 1/3;
+                justify-self: end;
+            }
+            .info{
+                font-size: $font-size - .5rem;
+                color: $neutral-color-white;
+                font-weight: $big-weight;
+            }
+            .small_info{
+                font-size: $font-size - .7rem;
+                color: $neutral-color-dark-grayish-cyan;
+                font-weight: $big-weight;
+            }
+            .number{
+                color: $primary-color-strong-cyan;
+            }
+            #reset{
+                width: 17.5625rem;
+                height: 3rem;
+                background-color: $primary-color-strong-cyan;
+                border-radius: 0.3125rem;
+                border: 0rem;
+                color: $neutral-color-very-dark-cyan;
+                font-size: $font-size - .2rem;
+                font-family: $font-family;
+                font-weight: $big-weight;
+                text-transform: uppercase;
+                @media (min-width: $desktop-size){
+                    width: 20.9375rem;
+                }
+            }
+            #reset:hover{
+                color: $neutral-color-very-dark-cyan;
+                background-color: hsl(171, 63%, 74%);
+            }
+        }
+    }
+}

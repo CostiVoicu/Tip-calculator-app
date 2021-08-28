@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+  <main class="main">
+    <header class="header">
+      <img src="./images/logo.svg" alt="The logo" class="logo">
+    </header>
+    <div class="calculator_background">
+      <div class="input">
+        <form class="money">
+          <h1 class="title">Bill</h1>
+          <img src="./images/icon-dollar.svg" alt="Dollar sign" class="dollar">
+          <input type="number" placeholder="0" class="input_form" id="bill">
+        </form>
+        <div class="tip">
+          <h1 class="title" id="tip_title">Select Tip %</h1>
+          <button type="button" class="percent" id="5_percent">5%</button>
+          <button type="button" class="percent" id="10_percent">10%</button>
+          <button type="button" class="percent" id="15_percent">15%</button>
+          <button type="button" class="percent" id="25_percent">25%</button>
+          <button type="button" class="percent" id="50_percent">50%</button>
+          <input type="number" class="percent" placeholder="Custom" id="custom_percent">
+        </div>
+        <div class="people">
+          <h1 class="title">Number of People</h1>
+          <span class="error" id="error">Can't be zero</span>
+          <img src="./images/icon-person.svg" alt="Person sign" class="person">
+          <input type="number" class="input_form" placeholder="0" id="number_people">
+        </div>
+      </div>
+      <div class="output">
+        <div class="amount">
+          <p class="info" id="info_amount">Tip Amount</p>
+          <p class="small_info" id="person_amount">/ person</p>
+          <h2 class="number" id="tip_amount">$0.00</h2>
+        </div>
+        <div class="total">
+          <p class="info" id="info_total">Total</p>
+          <p class="small_info" id="person_total">/ person</p>
+          <h2 class="number" id="total_total">$0.00</h2>
+        </div>
+        <button type="button" id="reset">Reset</button>
+      </div>
+    </div>
+  </main>
+  <script src="./script/script.js"></script>
+</body>
+</html>
