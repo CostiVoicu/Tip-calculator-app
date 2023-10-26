@@ -7,11 +7,8 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-- [Author](#author)
-
 
 ## Overview
 
@@ -27,11 +24,6 @@ Users should be able to:
 
 ![](./images/desktop-ss.png)
 
-### Links
-
-- Solution URL: [solution URL here](https://your-solution-url.com)
-- Live Site URL: [live site URL here](https://your-live-site-url.com)
-
 ## My process
 
 ### Built with
@@ -42,10 +34,3 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - Javascript events
-
-## Author
-
-- My GitHub profile - [Costi Voicu](https://github.com/CostiVoicu)
-- Frontend Mentor - [@JustAFatRaccoon](https://www.frontendmentor.io/profile/JustAFatRaccoon)
-- Twitter - [@VoicuCosti2](https://twitter.com/VoicuCosti2)
-- Instagram - [@c0stiv0icu](https://www.instagram.com/c0stiv0icu/)
