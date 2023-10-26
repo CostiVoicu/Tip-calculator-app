@@ -11,6 +11,8 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ## Overview
 
+[Here you can visit the website](https://costivoicu.github.io/Tip-calculator-app/)
+
 ### The challenge
 
 Users should be able to:
