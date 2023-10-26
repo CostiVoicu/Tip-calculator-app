@@ -7,8 +7,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-- [My process](#my-process)
-  - [Built with](#built-with)
+- [Built with](#built-with)
 
 ## Overview
 
@@ -24,9 +23,7 @@ Users should be able to:
 
 ![](./images/desktop-ss.png)
 
-## My process
-
-### Built with
+## Built with
 
 - Semantic HTML5 markup
 - Sass variables
